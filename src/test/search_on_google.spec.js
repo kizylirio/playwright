@@ -1,20 +1,41 @@
+import { describe, test } from '@playwright/test'
 import { startBrowser } from '../configuration/browser.js';
 import { takeScreenshot } from '../configuration/screenshot.js'
 
-(async () => {
+describe('Search on Google website', () => {
+      test('Should playwright page found', () => {
+            const page = await startBrowser('chrome', false).then( browser => browser.newPage())
 
-      const page = await startBrowser('chrome', false).then( browser => browser.newPage())
+            await page.goto('https://www.google.com/');
+      
+            await page.fill('[aria-label="Pesquisar"]', 'Playwright');
+      
+            await Promise.all([
+                  page.waitForNavigation(),
+                  page.press('[aria-label="Pesquisar"]', 'Enter')
+            ]);
+      
+            await takeScreenshot(page, {fullPage: false})
+      
+            await page.close();
+      })
+})
 
-      await page.goto('https://www.google.com/');
 
-      await page.fill('[aria-label="Pesquisar"]', 'Playwright');
+// (async () => {
 
-      await Promise.all([
-            page.waitForNavigation(),
-            page.press('[aria-label="Pesquisar"]', 'Enter')
-      ]);
+//       const page = await startBrowser('chrome', false).then( browser => browser.newPage())
 
-      await takeScreenshot(page, {fullPage: false})
+//       await page.goto('https://www.google.com/');
 
-      await page.close();
-})();
+//       await page.fill('[aria-label="Pesquisar"]', 'Playwright');
+
+//       await Promise.all([
+//             page.waitForNavigation(),
+//             page.press('[aria-label="Pesquisar"]', 'Enter')
+//       ]);
+
+//       await takeScreenshot(page, {fullPage: false})
+
+//       await page.close();
+// })();
