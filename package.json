@@ -1,12 +1,14 @@
 {
   "name": "quality-playwright",
   "version": "1.0.0",
-  "description": "testes automatizados de ui com playwright",
+  "description": "Ui automated test using playwright",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
     "codegen": "npx playwright codegen",
-    "chrome:open": "npx playwright open"
+    "open:chrome": "npx playwright open",
+    "open:firefox": "npx playwright open --browser=firefox",
+    "open:wk": "npx playwright wk"
   },
   "author": "Kizy Lopes",
   "license": "ISC",

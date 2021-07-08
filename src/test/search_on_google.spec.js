@@ -14,15 +14,3 @@ test.describe('Search on Google website', () => {
             await page.close();
       })
 })
-
-// (async () => {
-//       const page = await startBrowser('chrome', false).then( browser => browser.newPage())
-//       await page.goto('https://www.google.com/');
-//       await page.fill('[aria-label="Pesquisar"]', 'Playwright');
-//       await Promise.all([
-//             page.waitForNavigation(),
-//             page.press('[aria-label="Pesquisar"]', 'Enter')
-//       ]);
-//       await takeScreenshot(page, {fullPage: false})
-//       await page.close();
-// })();
