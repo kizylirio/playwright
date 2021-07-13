@@ -2,9 +2,9 @@
   "name": "quality-playwright",
   "version": "1.0.0",
   "description": "Ui automated test using playwright",
-  "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
+    "pretest": "npx eslint --ext .js ./ --fix",
+    "test": "npx playwright test ",
     "codegen": "npx playwright codegen",
     "open:chrome": "npx playwright open",
     "open:firefox": "npx playwright open --browser=firefox",
@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.12.3",
+    "eslint": "^7.30.0",
     "fs-extra": "^10.0.0",
     "playwright": "^1.12.3"
   }

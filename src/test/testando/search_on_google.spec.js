@@ -1,9 +1,9 @@
-const { test } = require('@playwright/test')
+import { test } from '@playwright/test'
 
 test.describe('Search on Google website', () => {
       test.use({args: ['--start-maximized']})
 
-      test('Should playwright page found', async ({ page }) => {
+      test('Should playwright page found', async function({ page }){
 
             await page.goto('https://www.google.com/');
             await page.fill('[aria-label="Pesquisar"]', 'Playwright');

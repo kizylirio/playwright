@@ -1,4 +1,5 @@
 module.exports = {
+    testDir: 'src/test', 
     use: {
       // Browser options
       headless: false,
