@@ -1,4 +1,4 @@
-const { test } = require('@playwright/test')
+import { test } from '@playwright/test'
 
 test.describe('Search on Google website', () => {
       test.use({args: ['--start-maximized']})
