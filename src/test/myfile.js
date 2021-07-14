@@ -1,0 +1,1 @@
+export const message = ({name}) => console.log(`o nome é ${name}`)

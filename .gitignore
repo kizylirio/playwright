@@ -105,3 +105,6 @@ dist
 
 # project directories
 result/
+
+#babel
+lib/

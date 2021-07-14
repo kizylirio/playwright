@@ -1,0 +1,7 @@
+{
+	"presets": [["@babel/preset-env", { "targets": { "node": "current", "esmodules": true}}]],
+  "plugins": ["@babel/plugin-transform-destructuring"],
+  "ignore": [
+    "/node_modules/"
+  ]
+}
