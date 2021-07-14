@@ -8,10 +8,13 @@ https://playwright.dev/
 - Clone this project
 - Install using follow command  ```npm install```
 
+
 ### How to run
 | Command | Description |
 | ----------- | ------------- |
-| `npm run test` |  Run all tests |
+| `npm run test:jest` |  Run tests using jest |
+| `npm run test:jest:coverage` |  Run tests using jest --coverage |
+| `npm run test:playwright` |  Run tests using playwright |
 | `npm run codegen` | Open the code generator |
 | `npm run open:chrome` | Open chrome with playwright inspector |
 | `npm run open:chrome` | Open firefox with playwright inspector |
@@ -35,5 +38,5 @@ See more: https://playwright.dev/docs/cli/#emulate-devices
 - Click on play button
 
 See more: 
-https://playwright.dev/docs/debug#visual-studio-code-debugger-nodejs
-https://playwright.dev/docs/debug
+- https://playwright.dev/docs/debug#visual-studio-code-debugger-nodejs
+- https://playwright.dev/docs/debug

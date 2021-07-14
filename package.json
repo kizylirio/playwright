@@ -4,7 +4,9 @@
   "description": "Ui automated test using playwright",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
+    "test:jest": "jest /test/jest/*/*",
+    "test:jest:coverage": "jest /test/jest/*/* --coverage",
+    "test:playwright": "npx playwright test",
     "codegen": "npx playwright codegen",
     "open:chrome": "npx playwright open",
     "open:firefox": "npx playwright open --browser=firefox",
@@ -13,8 +15,10 @@
   "author": "Kizy Lopes",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.12.3",
     "fs-extra": "^10.0.0",
-    "playwright": "^1.12.3"
+    "jest": "^27.0.6",
+    "jest-playwright-preset": "^1.7.0",
+    "playwright": "^1.12.3",
+    "@playwright/test": "^1.12.3"
   }
 }

@@ -1,4 +1,5 @@
 module.exports = {
+    testDir: 'src/test/playwright',
     use: {
       // Browser options
       headless: false,
