@@ -5,9 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug all tests via NPM",
+            "name": "Debug all jest tests via NPM",
             "request": "launch",
-            "runtimeArgs": [ "run", "test"],
+            "runtimeArgs": [ "run", "test:jest"],
+            "runtimeExecutable": "npm",
+            "skipFiles": [ "<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
+            "name": "Debug all playwright tests via NPM",
+            "request": "launch",
+            "runtimeArgs": [ "run", "test:playwright"],
             "runtimeExecutable": "npm",
             "skipFiles": [ "<node_internals>/**"],
             "type": "pwa-node"

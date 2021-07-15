@@ -3,13 +3,18 @@
  * https://jestjs.io/docs/configuration
  */
 
+//process.env.JEST_PLAYWRIGHT_CONFIG = './jest-playwright.config.js'
+
 module.exports = {
 
   // A preset that is used as a base for Jest's configuration
   preset: "jest-playwright-preset",
 
   // Options that will be passed to the testEnvironment
-  // testEnvironmentOptions: { },
+  //testEnvironmentOptions: { },
+
+  // The test environment that will be used for testing
+  // testEnvironment: "jest-environment-node",
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -139,9 +144,6 @@ module.exports = {
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
-
-  // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
 
   // Adds a location field to test results
   // testLocationInResults: false,
