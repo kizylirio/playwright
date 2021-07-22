@@ -15,10 +15,10 @@ https://playwright.dev/
 | `npm run test:jest` |  Run tests using jest |
 | `npm run test:jest:coverage` |  Run tests using jest --coverage |
 | `npm run test:playwright` |  Run tests using playwright |
-| `npm run codegen` | Open the code generator |
+| `npm run codegen` | Open playwright code generator |
 | `npm run open:chrome` | Open chrome with playwright inspector |
-| `npm run open:chrome` | Open firefox with playwright inspector |
-| `npm run open:chrome` | Open webkit (safari emulator) with playwright inspector |
+| `npm run open:firefox` | Open firefox with playwright inspector |
+| `npm run open:wk` | Open webkit (safari emulator) with playwright inspector |
 
 See more: https://playwright.dev/docs/cli/#emulate-devices
 
@@ -28,13 +28,13 @@ See more: https://playwright.dev/docs/cli/#emulate-devices
 ##### Javascript debug terminal
 - Click on menu View > Command Pallet...
 - Search by "Debug: JavaScript Debug Terminal"
-- Put the breakpoint in your code or use the reserved word "debugger"
+- Put breakpoint in your code or use the reserved word "debugger"
 - Run code
 
 ##### Launch config
 - Click on "Run and Debug" side menu
-- Select "Debug all tests via NPM" option
-- Put the breakpoint in your code or use the reserved word "debugger"
+- Select `Debug all jest tests via NPM` or `Debug all playwright tests via NPM` option
+- Put breakpoint in your code or use the reserved word "debugger"
 - Click on play button
 
 See more: 
