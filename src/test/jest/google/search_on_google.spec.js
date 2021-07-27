@@ -6,6 +6,10 @@ describe('Search on Google website', () => {
                   page.waitForNavigation(),
                   page.press('[aria-label="Pesquisar"]', 'Enter')
             ]);
+
+            const content = await page.textContent('.LC20lb');
+            expect(content).to.exist;
+
             await page.close();
       })
 }) 
