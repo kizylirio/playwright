@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug current jest test via NPM",
+            "request": "launch",
+            "runtimeArgs": [ "jest", "\\\\test\\\\jest\\\\.*\\\\${fileBasename}"],
+            "runtimeExecutable": "npx",
+            "skipFiles": [ "<node_internals>/**"],
+            "type": "pwa-node",
+        },
+        {
             "name": "Debug all jest tests via NPM",
             "request": "launch",
             "runtimeArgs": [ "run", "test:jest"],
